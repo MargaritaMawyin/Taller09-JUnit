@@ -16,50 +16,36 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author Margarita Mawyin
  */
-public class MovieTest {
+public class MovieTest {    
+    Movie theManWhoKnewTooMuch, mulan, slumdogMillionaire;
     
-    public MovieTest() {
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
+    public MovieTest(){
+        setUp();
     }
     
     @BeforeEach
     public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
+        this.theManWhoKnewTooMuch = new Movie("The Man Who Knew Too Much", Movie.REGULAR);
+        this.mulan = new Movie("Mulan", Movie.CHILDRENS);
+        this.slumdogMillionaire = new Movie("Slumdog Millionaire", Movie.NEW_RELEASE);
     }
 
-    /**
-     * Test of getPriceCode method, of class Movie.
-     */
     @Test
     public void testGetPriceCode() {
-        System.out.println("getPriceCode");
-        Movie instance = new Movie("Over the moon", Movie.CHILDRENS);
-        int expResult = Movie.CHILDRENS;
-        int result = instance.getPriceCode();
-        assertEquals(expResult, result);
+        assertEquals(Movie.REGULAR, theManWhoKnewTooMuch.getPriceCode());
     }
 
-    /**
-     * Test of setPriceCode method, of class Movie.
-     */
+    @Test
+    public void testGetTitle() {
+        assertEquals("The Man Who Knew Too Much", theManWhoKnewTooMuch._title);
+    }
+
     @Test
     public void testSetPriceCode() {
-        System.out.println("setPriceCode");
-        int arg = Movie.NEW_RELEASE;
-        Movie instance = new Movie ("Over the moon", Movie.CHILDRENS);
-        instance.setPriceCode(Movie.CHILDRENS);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        theManWhoKnewTooMuch.setPriceCode(Movie.NEW_RELEASE);
+        assertEquals(Movie.NEW_RELEASE, theManWhoKnewTooMuch.getPriceCode());
+        theManWhoKnewTooMuch.setPriceCode(Movie.REGULAR);
+        assertEquals(Movie.REGULAR, theManWhoKnewTooMuch.getPriceCode());
     }
     
 }
