@@ -4,4 +4,5 @@ com\mycompany\rentalsystest\Xbox360Game.class
 com\mycompany\rentalsystest\VideoGameRental.class
 com\mycompany\rentalsystest\Ps3Game.class
 com\mycompany\rentalsystest\MovieRental.class
+.netbeans_automatic_build
 com\mycompany\rentalsystest\WiiGame.class
