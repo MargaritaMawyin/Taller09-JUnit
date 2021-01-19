@@ -89,7 +89,6 @@ public class VideoGameRentalTest {
         
     }
     
-    @Deprecated
     @Test
     public void testStatementPs3GameOnly() {
         // Ps3 games cost $4.00 for the first 4 days, and $1.250/day thereafter
@@ -119,7 +118,6 @@ public class VideoGameRentalTest {
            johnDoe.statement());
     }
     
-    @Deprecated
     @Test
     public void testStatementWiiGameOnly() {
         // childrens' movies cost $1.50 for the first 3 days, and $1.50/day thereafter
@@ -149,7 +147,6 @@ public class VideoGameRentalTest {
                 johnDoeJr.statement());
     }
     
-    @Deprecated
     @Test
     public void testStatementXbox360GameOnly() {
         // new releases cost $3.00/day
