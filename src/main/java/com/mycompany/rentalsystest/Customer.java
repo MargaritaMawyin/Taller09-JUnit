@@ -13,14 +13,17 @@ class Customer {
         _name = name;
     }
 
-    public void addMovieRental(MovieRental arg) {
-        _movieRentals.add(arg);
+    public boolean addMovieRental(MovieRental arg) {
+        return _movieRentals.add(arg);
     }
 
-    public void addVideoGameRental(VideoGameRental arg) {
-        _videoGameRental.add(arg);
+    public boolean addVideoGameRental(VideoGameRental arg) {
+        return _videoGameRental.add(arg);
     }
     
+    public ArrayList<VideoGameRental> getVideoGames(){
+        return _videoGameRental;
+    }
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
@@ -78,4 +81,5 @@ class Customer {
                 + " frequent renter points";
         return result;
     }
+    
 }
